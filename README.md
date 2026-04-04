@@ -1,53 +1,127 @@
-# 🪨 caveman
+<p align="center">
+  <img src="https://em-content.zobj.net/source/apple/391/rock_1faa8.png" width="120" />
+</p>
 
-> why use many token when few token do trick
+<h1 align="center">caveman</h1>
 
-A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that makes Claude talk like a caveman — cutting ~75% of tokens while keeping full technical accuracy.
+<p align="center">
+  <strong>why use many token when few token do trick</strong>
+</p>
 
-Based on the [viral observation](https://x.com) that caveman-speak dramatically reduces LLM token usage without losing technical substance.
+<p align="center">
+  <a href="#install">Install</a> •
+  <a href="#before--after">Before/After</a> •
+  <a href="#why">Why</a>
+</p>
+
+---
+
+A [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that makes Claude talk like a caveman — cutting **~75% of tokens** while keeping full technical accuracy.
+
+Based on the [viral observation](https://x.com/goodside/status/1922279423968583859) that caveman-speak dramatically reduces LLM token usage without losing technical substance. So we made it a one-line install.
 
 ## Before / After
 
-**Normal Claude:**
+<table>
+<tr>
+<td width="50%">
+
+### 🗣️ Normal Claude (69 tokens)
+
 > "The reason your React component is re-rendering is likely because you're creating a new object reference on each render cycle. When you pass an inline object as a prop, React's shallow comparison sees it as a different object every time, which triggers a re-render. I'd recommend using useMemo to memoize the object."
 
-**Caveman Claude:**
+</td>
+<td width="50%">
+
+### 🪨 Caveman Claude (19 tokens)
+
 > "New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`."
 
-Same fix. 75% less word.
+</td>
+</tr>
+<tr>
+<td>
+
+### 🗣️ Normal Claude
+
+> "Sure! I'd be happy to help you with that. The issue you're experiencing is most likely caused by your authentication middleware not properly validating the token expiry. Let me take a look and suggest a fix."
+
+</td>
+<td>
+
+### 🪨 Caveman Claude
+
+> "Bug in auth middleware. Token expiry check use `<` not `<=`. Fix:"
+
+</td>
+</tr>
+</table>
+
+**Same fix. 75% less word. Brain still big.**
 
 ## Install
 
 ```bash
-claude install-skill julb/caveman
+claude install-skill JuliusBrussee/caveman
 ```
 
-Or clone repo and add to your Claude Code skills manually.
+One rock. That it.
 
 ## Usage
 
-Once installed, trigger with:
-- `/caveman` 
+Trigger with:
+- `/caveman`
 - "talk like caveman"
-- "use caveman mode"
+- "caveman mode"
 - "less tokens please"
 
-To stop: say "stop caveman" or "normal mode"
+Stop with: "stop caveman" or "normal mode"
 
-## Rules
+## What Caveman Do
 
-- English go caveman. Code stay normal
-- Technical terms keep exact (no dumb down "polymorphism" to "many shape thing")
-- Error messages quoted exact
-- Git commits and PRs stay normal
+| Thing | Caveman Do? |
+|-------|------------|
+| English explanation | 🪨 Caveman smash filler words |
+| Code blocks | ✍️ Write normal (caveman not stupid) |
+| Technical terms | 🧠 Keep exact (polymorphism stay polymorphism) |
+| Error messages | 📋 Quote exact |
+| Git commits & PRs | ✍️ Write normal |
+| Articles (a, an, the) | 💀 Gone |
+| Pleasantries | 💀 "Sure I'd be happy to" is dead |
+| Hedging | 💀 "It might be worth considering" extinct |
 
 ## Why
 
-- Token go brrr (save money)
-- Response faster (less generate)
-- Same accuracy (all technical info kept)
-- Fun (ooga booga)
+```
+┌─────────────────────────────────────┐
+│  TOKENS SAVED          ████████ 75% │
+│  TECHNICAL ACCURACY    ████████ 100%│
+│  SPEED INCREASE        ████████ ~3x │
+│  VIBES                 ████████ OOG │
+└─────────────────────────────────────┘
+```
+
+- **Save money** — 75% less token = 75% less cost on output
+- **Faster response** — less token to generate = speed go brrr
+- **Same accuracy** — all technical info kept, only fluff removed
+- **Fun** — every code review become comedy
+
+## How It Work
+
+Caveman not dumb. Caveman **efficient**.
+
+Normal LLM waste token on:
+- "I'd be happy to help you with that" (8 wasted tokens)
+- "The reason this is happening is because" (7 wasted tokens)
+- "I would recommend that you consider" (7 wasted tokens)
+- "Sure, let me take a look at that for you" (10 wasted tokens)
+
+Caveman say what need saying. Then stop.
+
+## Star This Repo
+
+If caveman save you mass token, mass money — leave mass star. ⭐
 
 ## License
 
-MIT — free like mammoth on open plain.
+MIT — free like mass mammoth on open plain.
